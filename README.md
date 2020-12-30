@@ -2,8 +2,14 @@
 Installs the current ffmpeg-version on a debian slim.
 
 # How to build
+Build your own:
 ```
 docker build git://github.com/handflucht/ffmpeg.git -t handflucht/ffmpeg
+```
+
+Use existing one:
+```
+docker pull handflucht/ffmpeg
 ```
 
 # Usage
