@@ -1,5 +1,6 @@
-FROM debian:stretch-20201117-slim
+FROM debian:buster-20210111-slim
 
+# none for latest version
 ARG FFMPEG_VERSION=""
 
 RUN apt-get update; \    
@@ -8,10 +9,5 @@ RUN apt-get update; \
         apt-get install -y ffmpeg; \
     else \
         apt-get install -y ffmpeg=$FFMPEG_VERSION; \
-    fi
-
-RUN rm -rf /var/lib/apt/lists
-
-CMD ["--help"]
-ENTRYPOINT [ "ffmpeg" ]
-
+    fi; \    
+    apt-get clean
