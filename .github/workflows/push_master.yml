@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  docker:
+  push_to_registry:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,3 @@ jobs:
         with:
           push: true
           tags: handflucht/ffmpeg:latest
-          build-args: |
-            arg1=value1
-            arg2=value2
