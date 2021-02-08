@@ -1,11 +1,11 @@
-name: Linting
+name: Linting and build
 
 on:
   pull_request:
   push:
 
 jobs:
-  docker:
+  lint_build:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,3 +13,7 @@ jobs:
       
       - name: Hadolint Action
         uses: brpaz/hadolint-action@v1.2.1
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
