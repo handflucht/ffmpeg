@@ -1,7 +1,6 @@
 name: Linting and build
 
 on:
-  pull_request:
   push:
 
 jobs:
