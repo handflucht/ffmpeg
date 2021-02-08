@@ -1,4 +1,4 @@
-name: Linting and registriy-push
+name: Build and push to registry
 
 on:
   push:
@@ -10,9 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Hadolint Action
-        uses: brpaz/hadolint-action@v1.2.1
 
       - name: Login to DockerHub
         uses: docker/login-action@v1 
