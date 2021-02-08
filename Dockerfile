@@ -1,6 +1,6 @@
 FROM debian:stretch-20201117-slim
 
-ARG FFMPEG_VERSION = ""
+ARG FFMPEG_VERSION=""
 
 # hadolint ignore=DL3008 
 RUN apt-get update; \    
