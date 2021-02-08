@@ -27,6 +27,11 @@ jobs:
       
       - name: Hadolint Action
         uses: brpaz/hadolint-action@v1.2.1
+
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
       -
         name: Login to DockerHub
         uses: docker/login-action@v1 
